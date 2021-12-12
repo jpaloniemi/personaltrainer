@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled, alpha, useTheme } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -19,6 +20,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import TodayIcon from '@mui/icons-material/Today';
+import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
 
@@ -143,22 +145,30 @@ function SearchAppBar() {
         <Divider />
             <List>
             <ListItem>
+            <Button component={RouterLink} to="/Customers">
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
               <ListItemText primary="Customers" />
+            </Button>
             </ListItem>
+            
               <ListItem>
+              <Button component={RouterLink} to="/Trainings">
               <ListItemIcon>
                 <DirectionsRunIcon />
               </ListItemIcon>
               <ListItemText primary="Trainings" />
+              </Button>
             </ListItem>
+
               <ListItem>
+              <Button component={RouterLink} to="/Calendar">
               <ListItemIcon>
                 <TodayIcon />
               </ListItemIcon>
               <ListItemText primary="Calendar" />
+              </Button>
             </ListItem>
             </List>
       </Drawer>
